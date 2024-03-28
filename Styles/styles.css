@@ -24,8 +24,19 @@ body {
 .bg-pale1 { background-color: var(--c-pale1); }
 .bg-blue1 { background-color: var(--c-blue1); }
 
-.text-player {
+.text-player-turn1 {
     font-size: 3vw;
+    color: var(--c-blue2);
+}
+
+.text-player-turn2 {
+    font-size: 3vw;
+    color: var(--c-pale2);
+}
+
+.text-player-no-turn {
+    font-size: 2vw;
+    color: white;
 }
 
 .text-kitten {
@@ -36,6 +47,14 @@ body {
     text-align: center;
     padding-top: 1vw;
     cursor: pointer;
+}
+
+.text-kitten-p1 {
+    color: var(--c-blue2);
+}
+
+.text-kitten-p2 {
+    color: var(--c-pale2);
 }
 
 .box-1 {
@@ -66,6 +85,14 @@ body {
     border-color: var(--c-black1);
     border-width: 2px;
     margin: 2px;
+}
+
+.selectedp1 {
+    background-color: var(--c-blue2) !important;
+}
+
+.selectedp2 {
+    background-color: var(--c-pale2) !important;
 }
 
 .box-1:hover{
@@ -131,17 +158,21 @@ body {
 @keyframes b3 {
     0% {
         background-color: var(--c-grey2);
+        color: var(--c-black1);
     }
     100% {
         background-color: var(--c-black1);
+        color: var(--c-pale1);
     }
 }
 
 @keyframes b3n {
     100% {
         background-color: var(--c-grey2);
+        columns: var(--c-black1);
     }
     0% {
         background-color: var(--c-black1);
+        color: var(--c-pale1);
     }
 }
