@@ -2,10 +2,10 @@
     --c-grey1: rgb(57, 57, 58);
     --c-black1: rgb(0, 0, 0);
     --c-pale1: rgb(211, 209, 187);
-    --c-pale2: rgb(207, 207, 201);
+    --c-pale2: rgb(167, 167, 83);
     --c-grey2: rgb(111, 125, 140);
     --c-blue1: rgb(127, 195, 204);
-    --c-blue2: rgb(3, 175, 197);
+    --c-blue2: rgb(3, 133, 150);
 }
 
 body {
@@ -23,6 +23,20 @@ body {
 .bg-black1 { background-color: var(--c-black1); }
 .bg-pale1 { background-color: var(--c-pale1); }
 .bg-blue1 { background-color: var(--c-blue1); }
+
+.text-player {
+    font-size: 3vw;
+}
+
+.text-kitten {
+    font-size: 3vw;
+    font-weight: bold;
+    top: 50%;
+    color: var(--c-black1);
+    text-align: center;
+    padding-top: 1vw;
+    cursor: pointer;
+}
 
 .box-1 {
     width: calc(100vw / 12 - 10px);
@@ -55,20 +69,29 @@ body {
 }
 
 .box-1:hover{
-    animation: b1 0.5s;
+    animation: b1 0.8s;
     animation-fill-mode: forwards;
 }
 .box-1:not(:hover) {
-    animation: b1n 0.5s;
+    animation: b1n 0.8s;
     animation-fill-mode: forwards;
 }
 
 .box-2:hover{
-    animation: b2 0.5s;
+    animation: b2 0.8s;
     animation-fill-mode: forwards;
 }
 .box-2:not(:hover) {
-    animation: b2n 0.5s;
+    animation: b2n 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.box-3:hover{
+    animation: b3 0.8s;
+    animation-fill-mode: forwards;
+}
+.box-3:not(:hover) {
+    animation: b3n 0.8s;
     animation-fill-mode: forwards;
 }
 
@@ -103,5 +126,22 @@ body {
     }
     0% {
         background-color: var(--c-pale2);
+    }
+}
+@keyframes b3 {
+    0% {
+        background-color: var(--c-grey2);
+    }
+    100% {
+        background-color: var(--c-black1);
+    }
+}
+
+@keyframes b3n {
+    100% {
+        background-color: var(--c-grey2);
+    }
+    0% {
+        background-color: var(--c-black1);
     }
 }

@@ -7,98 +7,135 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Styles/styles.css">
 </head>
-<body>
+<body onload="load();">
     <!-- test2 -->
     <div class="container-fluid bg-black1" style="height: 100vh;">
         <div class="row bg-grey1">
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
+            <div class="col-3 box-player my-auto py-auto" id="a1">
+                <H1 class="text-center my-auto py-auto text-player">PLAYER 1</H1>
+            </div>
+            <div class="col box-2 text-kitten" id="i00"></div>
+            <div class="col box-1 text-kitten" id="i01"></div>
+            <div class="col box-2 text-kitten" id="i02"></div>
+            <div class="col box-1 text-kitten" id="i03"></div>
+            <div class="col box-2 text-kitten" id="i04"></div>
+            <div class="col box-1 text-kitten" id="i05"></div>
+            <div class="col-3 box-player my-auto py-auto" id="j1">
+                <H1 class="text-center my-auto py-auto text-player">PLAYER 2</H1>
+            </div>
+        </div>
+        <!-- d,e,f,g,h,i = play area -->
+        <div class="row bg-grey1">
+            <div class="col box-3 text-kitten" id="a2"></div>
+            <div class="col box-3 text-kitten" id="b2"></div>
+            <div class="col box-3 text-kitten" id="c2"></div>
+            <div class="col box-1 text-kitten" id="i10"></div>
+            <div class="col box-2 text-kitten" id="i11"></div>
+            <div class="col box-1 text-kitten" id="i12"></div>
+            <div class="col box-2 text-kitten" id="i13"></div>
+            <div class="col box-1 text-kitten" id="i14"></div>
+            <div class="col box-2 text-kitten" id="i15"></div>
+            <div class="col box-3 text-kitten" id="j2"></div>
+            <div class="col box-3 text-kitten" id="k2"></div>
+            <div class="col box-3 text-kitten" id="l2"></div>
         </div>
         <div class="row bg-grey1">
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
+            <div class="col box-3 text-kitten" id="a3"></div>
+            <div class="col box-3 text-kitten" id="b3"></div>
+            <div class="col box-3 text-kitten" id="c3"></div>
+            <div class="col box-2 text-kitten" id="i20"></div>
+            <div class="col box-1 text-kitten" id="i21"></div>
+            <div class="col box-2 text-kitten" id="i22"></div>
+            <div class="col box-1 text-kitten" id="i23"></div>
+            <div class="col box-2 text-kitten" id="i24"></div>
+            <div class="col box-1 text-kitten" id="i25"></div>
+            <div class="col box-3 text-kitten" id="j3"></div>
+            <div class="col box-3 text-kitten" id="k3"></div>
+            <div class="col box-3 text-kitten" id="l3"></div>
         </div>
         <div class="row bg-grey1">
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
+            <div class="col box-3 text-kitten" id="a4"></div>
+            <div class="col box-3 text-kitten" id="b4"></div>
+            <div class="col box-3 text-kitten" id="c4"></div>
+            <div class="col box-1 text-kitten" id="i30"></div>
+            <div class="col box-2 text-kitten" id="i31"></div>
+            <div class="col box-1 text-kitten" id="i32"></div>
+            <div class="col box-2 text-kitten" id="i33"></div>
+            <div class="col box-1 text-kitten" id="i34"></div>
+            <div class="col box-2 text-kitten" id="i35"></div>
+            <div class="col box-3 text-kitten" id="j4"></div>
+            <div class="col box-3 text-kitten" id="k4"></div>
+            <div class="col box-3 text-kitten" id="l4"></div>
         </div>
         <div class="row bg-grey1">
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
+            <div class="col box-3 text-kitten" id="a5"></div>
+            <div class="col box-3 text-kitten" id="b5"></div>
+            <div class="col box-3 text-kitten" id="c5"></div>
+            <div class="col box-2 text-kitten" id="i40"></div>
+            <div class="col box-1 text-kitten" id="i41"></div>
+            <div class="col box-2 text-kitten" id="i42"></div>
+            <div class="col box-1 text-kitten" id="i43"></div>
+            <div class="col box-2 text-kitten" id="i44"></div>
+            <div class="col box-1 text-kitten" id="i45"></div>
+            <div class="col box-3 text-kitten" id="j5"></div>
+            <div class="col box-3 text-kitten" id="k5"></div>
+            <div class="col box-3 text-kitten" id="l5"></div>
         </div>
         <div class="row bg-grey1">
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
+            <div class="col box-3 text-kitten" id="a6"></div>
+            <div class="col box-3 text-kitten" id="b6"></div>
+            <div class="col box-3 text-kitten" id="c6"></div>
+            <div class="col box-1 text-kitten" id="i50"></div>
+            <div class="col box-2 text-kitten" id="i51"></div>
+            <div class="col box-1 text-kitten" id="i52"></div>
+            <div class="col box-2 text-kitten" id="i53"></div>
+            <div class="col box-1 text-kitten" id="i54"></div>
+            <div class="col box-2 text-kitten" id="i55"></div>
+            <div class="col box-3 text-kitten" id="j6"></div>
+            <div class="col box-3 text-kitten" id="k6"></div>
+            <div class="col box-3 text-kitten" id="l6"></div>
         </div>
-        <div class="row bg-grey1">
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-1"></div>
-            <div class="col box-2"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-            <div class="col box-3"></div>
-        </div>
+
 
 
     </div>
 
+    <script>
+        
+        function load() {
+            let i, j;
+            let playArea = [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ];
+            for (i = 0; i < 6; i++){
+                for (j = 0; j < 6; j++) {
+                    playArea[i][j] = document.getElementById("i" + i + j);
+                }
+            }
 
+            console.log(playArea);
+            
+        }
+
+        function update() {
+            for (i = 0; i < 6; i++){
+                for (j = 0; j < 6; j++) {
+
+                }
+            }
+        }
+
+
+
+
+
+
+    </script>
 
 
 
