@@ -7,19 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Styles/styles.css">
 </head>
-<body onload="load();">
+<body onload="load(); update();">
     <!-- test2 -->
     <div class="container-fluid bg-black1" style="height: 100vh;">
         <div class="row bg-grey1">
             <div class="col-3 box-player my-auto py-auto" id="a1">
                 <H1 class="text-center my-auto py-auto text-player">PLAYER 1</H1>
             </div>
-            <div class="col box-2 text-kitten" id="i00"></div>
-            <div class="col box-1 text-kitten" id="i01"></div>
-            <div class="col box-2 text-kitten" id="i02"></div>
-            <div class="col box-1 text-kitten" id="i03"></div>
-            <div class="col box-2 text-kitten" id="i04"></div>
-            <div class="col box-1 text-kitten" id="i05"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i00'); update();" id="i00"></div>
+            <div class="col box-1 text-kitten"onclick="playAreaClicked('i01'); update();" id="i01"></div>
+            <div class="col box-2 text-kitten"onclick="playAreaClicked('i02'); update();" id="i02"></div>
+            <div class="col box-1 text-kitten"onclick="playAreaClicked('i03'); update();" id="i03"></div>
+            <div class="col box-2 text-kitten"onclick="playAreaClicked('i04'); update();" id="i04"></div>
+            <div class="col box-1 text-kitten"onclick="playAreaClicked('i05'); update();" id="i05"></div>
             <div class="col-3 box-player my-auto py-auto" id="j1">
                 <H1 class="text-center my-auto py-auto text-player">PLAYER 2</H1>
             </div>
@@ -29,12 +29,12 @@
             <div class="col box-3 text-kitten" id="a2"></div>
             <div class="col box-3 text-kitten" id="b2"></div>
             <div class="col box-3 text-kitten" id="c2"></div>
-            <div class="col box-1 text-kitten" id="i10"></div>
-            <div class="col box-2 text-kitten" id="i11"></div>
-            <div class="col box-1 text-kitten" id="i12"></div>
-            <div class="col box-2 text-kitten" id="i13"></div>
-            <div class="col box-1 text-kitten" id="i14"></div>
-            <div class="col box-2 text-kitten" id="i15"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i10'); update();" id="i10"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i11'); update();" id="i11"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i12'); update();" id="i12"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i13'); update();" id="i13"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i14'); update();" id="i14"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i15'); update();" id="i15"></div>
             <div class="col box-3 text-kitten" id="j2"></div>
             <div class="col box-3 text-kitten" id="k2"></div>
             <div class="col box-3 text-kitten" id="l2"></div>
@@ -43,12 +43,12 @@
             <div class="col box-3 text-kitten" id="a3"></div>
             <div class="col box-3 text-kitten" id="b3"></div>
             <div class="col box-3 text-kitten" id="c3"></div>
-            <div class="col box-2 text-kitten" id="i20"></div>
-            <div class="col box-1 text-kitten" id="i21"></div>
-            <div class="col box-2 text-kitten" id="i22"></div>
-            <div class="col box-1 text-kitten" id="i23"></div>
-            <div class="col box-2 text-kitten" id="i24"></div>
-            <div class="col box-1 text-kitten" id="i25"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i20'); update();" id="i20"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i21'); update();" id="i21"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i22'); update();" id="i22"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i23'); update();" id="i23"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i24'); update();" id="i24"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i25'); update();" id="i25"></div>
             <div class="col box-3 text-kitten" id="j3"></div>
             <div class="col box-3 text-kitten" id="k3"></div>
             <div class="col box-3 text-kitten" id="l3"></div>
@@ -57,12 +57,12 @@
             <div class="col box-3 text-kitten" id="a4"></div>
             <div class="col box-3 text-kitten" id="b4"></div>
             <div class="col box-3 text-kitten" id="c4"></div>
-            <div class="col box-1 text-kitten" id="i30"></div>
-            <div class="col box-2 text-kitten" id="i31"></div>
-            <div class="col box-1 text-kitten" id="i32"></div>
-            <div class="col box-2 text-kitten" id="i33"></div>
-            <div class="col box-1 text-kitten" id="i34"></div>
-            <div class="col box-2 text-kitten" id="i35"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i30'); update();" id="i30"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i31'); update();" id="i31"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i32'); update();" id="i32"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i33'); update();" id="i33"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i34'); update();" id="i34"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i35'); update();" id="i35"></div>
             <div class="col box-3 text-kitten" id="j4"></div>
             <div class="col box-3 text-kitten" id="k4"></div>
             <div class="col box-3 text-kitten" id="l4"></div>
@@ -71,12 +71,12 @@
             <div class="col box-3 text-kitten" id="a5"></div>
             <div class="col box-3 text-kitten" id="b5"></div>
             <div class="col box-3 text-kitten" id="c5"></div>
-            <div class="col box-2 text-kitten" id="i40"></div>
-            <div class="col box-1 text-kitten" id="i41"></div>
-            <div class="col box-2 text-kitten" id="i42"></div>
-            <div class="col box-1 text-kitten" id="i43"></div>
-            <div class="col box-2 text-kitten" id="i44"></div>
-            <div class="col box-1 text-kitten" id="i45"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i40'); update();" id="i40"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i41'); update();" id="i41"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i42'); update();" id="i42"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i43'); update();" id="i43"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i44'); update();" id="i44"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i45'); update();" id="i45"></div>
             <div class="col box-3 text-kitten" id="j5"></div>
             <div class="col box-3 text-kitten" id="k5"></div>
             <div class="col box-3 text-kitten" id="l5"></div>
@@ -85,12 +85,12 @@
             <div class="col box-3 text-kitten" id="a6"></div>
             <div class="col box-3 text-kitten" id="b6"></div>
             <div class="col box-3 text-kitten" id="c6"></div>
-            <div class="col box-1 text-kitten" id="i50"></div>
-            <div class="col box-2 text-kitten" id="i51"></div>
-            <div class="col box-1 text-kitten" id="i52"></div>
-            <div class="col box-2 text-kitten" id="i53"></div>
-            <div class="col box-1 text-kitten" id="i54"></div>
-            <div class="col box-2 text-kitten" id="i55"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i50'); update();" id="i50"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i51'); update();" id="i51"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i52'); update();" id="i52"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i53'); update();" id="i53"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i54'); update();" id="i54"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i55'); update();" id="i55"></div>
             <div class="col box-3 text-kitten" id="j6"></div>
             <div class="col box-3 text-kitten" id="k6"></div>
             <div class="col box-3 text-kitten" id="l6"></div>
@@ -101,10 +101,9 @@
     </div>
 
     <script>
-        
+        let i, j, playArea;
         function load() {
-            let i, j;
-            let playArea = [
+            playArea = [
                 [0,0,0,0,0,0],
                 [0,0,0,0,0,0],
                 [0,0,0,0,0,0],
@@ -112,20 +111,25 @@
                 [0,0,0,0,0,0],
                 [0,0,0,0,0,0]
             ];
-            for (i = 0; i < 6; i++){
-                for (j = 0; j < 6; j++) {
-                    playArea[i][j] = document.getElementById("i" + i + j);
-                }
-            }
 
             console.log(playArea);
             
         }
 
+        function playAreaClicked(id) {
+            let nums = id.split("");
+            playArea[nums[1]][nums[2]] = "K";
+        }
+
         function update() {
             for (i = 0; i < 6; i++){
                 for (j = 0; j < 6; j++) {
-
+                    if (playArea[i][j] == 0) {
+                        document.getElementById("i" + i + j).innerHTML = ""
+                    }
+                    else {
+                        document.getElementById("i" + i + j).innerHTML = playArea[i][j];
+                    }
                 }
             }
         }
