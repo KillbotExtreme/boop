@@ -37,7 +37,7 @@ body {
 .box-2 {
     width: calc(100vw / 12 - 10px);
     height: calc(100vw / 12 - 10px);
-    background-color: var(--c-pale1);
+    /* background-color: var(--c-pale1); */
     border-radius: 2px;
     border-color: var(--c-black1);
     border-width: 2px;
@@ -63,6 +63,15 @@ body {
     animation-fill-mode: forwards;
 }
 
+.box-2:hover{
+    animation: b2 0.5s;
+    animation-fill-mode: forwards;
+}
+.box-2:not(:hover) {
+    animation: b2n 0.5s;
+    animation-fill-mode: forwards;
+}
+
 @keyframes b1 {
     0% {
         background-color: var(--c-blue1);
@@ -77,5 +86,22 @@ body {
     }
     0% {
         background-color: var(--c-blue2);
+    }
+}
+
+@keyframes b2 {
+    0% {
+        background-color: var(--c-pale1);
+    }
+    100% {
+        background-color: var(--c-pale2);
+    }
+}
+@keyframes b2n {
+    100% {
+        background-color: var(--c-pale1);
+    }
+    0% {
+        background-color: var(--c-pale2);
     }
 }
