@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boop Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/styles.css">
+</head>
+<body onload="load(); update();">
+    <!-- test2 -->
+    <div class="container-fluid bg-black1" style="height: 100vh;">
+        <div class="row bg-grey1">
+            <div class="col-3 box-player my-auto py-auto" id="a1">
+                <H1 class="text-center my-auto py-auto text-player-turn1" id="player1">PLAYER 1</H1>
+            </div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i00'); update();" id="i00"></div>
+            <div class="col box-1 text-kitten"onclick="playAreaClicked('i01'); update();" id="i01"></div>
+            <div class="col box-2 text-kitten"onclick="playAreaClicked('i02'); update();" id="i02"></div>
+            <div class="col box-1 text-kitten"onclick="playAreaClicked('i03'); update();" id="i03"></div>
+            <div class="col box-2 text-kitten"onclick="playAreaClicked('i04'); update();" id="i04"></div>
+            <div class="col box-1 text-kitten"onclick="playAreaClicked('i05'); update();" id="i05"></div>
+            <div class="col-3 box-player my-auto py-auto" id="j1">
+                <H1 class="text-center my-auto py-auto text-player-no-turn" id="player2">PLAYER 2</H1>
+            </div>
+        </div>
+        <!-- d,e,f,g,h,i = play area -->
+        <div class="row bg-grey1">
+            <div class="col-1"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(1);" id="1"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(2);" id="2"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i10'); update();" id="i10"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i11'); update();" id="i11"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i12'); update();" id="i12"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i13'); update();" id="i13"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i14'); update();" id="i14"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i15'); update();" id="i15"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(9);" id="9"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(10);" id="10"></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row bg-grey1">
+            <div class="col-1"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(3);" id="3"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(4);" id="4"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i20'); update();" id="i20"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i21'); update();" id="i21"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i22'); update();" id="i22"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i23'); update();" id="i23"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i24'); update();" id="i24"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i25'); update();" id="i25"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(11);" id="11"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(12);" id="12"></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row bg-grey1">
+            <div class="col-1"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(5);" id="5"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(6);" id="6"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i30'); update();" id="i30"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i31'); update();" id="i31"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i32'); update();" id="i32"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i33'); update();" id="i33"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i34'); update();" id="i34"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i35'); update();" id="i35"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(13);" id="13"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(14);" id="14"></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row bg-grey1">
+            <div class="col-1"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(7);" id="7"></div>
+            <div class="col box-3 text-kitten" onclick="p1Click(8);" id="8"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i40'); update();" id="i40"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i41'); update();" id="i41"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i42'); update();" id="i42"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i43'); update();" id="i43"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i44'); update();" id="i44"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i45'); update();" id="i45"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(15);" id="15"></div>
+            <div class="col box-3 text-kitten" onclick="p2Click(16);" id="16"></div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row bg-grey1">
+            <div class="col-3"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i50'); update();" id="i50"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i51'); update();" id="i51"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i52'); update();" id="i52"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i53'); update();" id="i53"></div>
+            <div class="col box-1 text-kitten" onclick="playAreaClicked('i54'); update();" id="i54"></div>
+            <div class="col box-2 text-kitten" onclick="playAreaClicked('i55'); update();" id="i55"></div>
+            <div class="col-3"></div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let i, j, playArea, player1, player2;
+        let turn = 1;
+        let selected = 0;
+        function load() {
+            playArea = [
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0],
+                [0,0,0,0,0,0]
+            ];
+            player1 = [1, 1, 1, 1, 1, 1, 1, 1];
+            player2 = [1, 1, 1, 1, 1, 1, 1, 1];
+            console.log(playArea);
+            
+        }
+
+        function p1Click(id) {
+            if (turn==1) {
+                for (i = 1; i < 9; i++) {
+                    if (i == id) {
+                        if (!ID(i).classList.contains("selectedp1")) {
+                            ID(i).classList.add("selectedp1");
+                        }
+                        else {
+                            ID(i).classList.remove("selectedp1");
+                        }
+                    }
+                    else {
+                        ID(i).classList.remove("selectedp1");
+                    }
+                }
+            }
+        }
+
+        function p2Click(id) {
+            if (turn==2) {
+                for (i = 9; i < 17; i++) {
+                    if (i == id) {
+                        if (!ID(i).classList.contains("selectedp2")) {
+                            ID(i).classList.add("selectedp2");
+                        }
+                        else {
+                            ID(i).classList.remove("selectedp2");
+                        }
+                    }
+                    else {
+                        ID(i).classList.remove("selectedp2");
+                    }
+                }
+            }
+        }
+
+        function playAreaClicked(id) {
+            let nums = id.split("");
+            if (turn == 1) {
+                for (i = 1; i < 9; i++) {
+                    console.log("1");
+                    if (ID(i).classList.contains("selectedp1") && player1[i-1] != 0) {
+                        if (playArea[nums[1]][nums[2]] == 0) {
+                            playArea[nums[1]][nums[2]] = ID(i).innerHTML;
+                            ID("i" + nums[1] + nums[2]).classList.add("text-kitten-p1");
+                            ID(i).classList.remove("selectedp1");
+                            player1[i-1] = 0;
+                            turn = 2;
+                            console.log("2");
+                        }
+                        console.log("3");
+                        break;
+                    }
+                }
+            }
+            else {
+                for (i = 9; i < 17; i++) {
+                    console.log("4");
+                    if (ID(i).classList.contains("selectedp2") && player1[i-1] != 0) {
+                        if (playArea[nums[1]][nums[2]] == 0) {
+                            playArea[nums[1]][nums[2]] = ID(i).innerHTML;
+                            ID("i" + nums[1] + nums[2]).classList.add("text-kitten-p2");
+                            ID(i).classList.remove("selectedp2");
+                            player2[i-9] = 0;
+                            turn = 1;
+                            console.log("5");
+                        }
+                        console.log("6");
+                        break;
+                    }
+                }
+            }
+            
+        }
+
+        function update() {
+            for (i = 0; i < 6; i++){
+                for (j = 0; j < 6; j++) {
+                    if (playArea[i][j] == 0) {
+                        ID("i" + i + j).innerHTML = ""
+                    }
+                    else {
+                        ID("i" + i + j).innerHTML = playArea[i][j];
+                    }
+                }
+            }
+            for (i = 0; i < 8; i++) {
+                switch(player1[i]) {
+                    case 0:
+                        ID(i+1).innerHTML = "";
+                        break;
+                    case 1:
+                        ID(i+1).innerHTML = "K";
+                        break;
+                    case 2:
+                        ID(i+1).innerHTML = "C";
+                        break;
+                    default:
+                        break;
+                }
+                switch(player2[i]) {
+                    case 0:
+                        ID(i+9).innerHTML = "";
+                        break;
+                    case 1:
+                        ID(i+9).innerHTML = "K";
+                        break;
+                    case 2:
+                        ID(i+9).innerHTML = "C";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            if (turn == 1) {
+                ID("player1").classList.replace("text-player-no-turn", "text-player-turn1")
+                ID("player2").classList.replace("text-player-turn2", "text-player-no-turn")
+            }
+            else {
+                ID("player1").classList.replace("text-player-turn1", "text-player-no-turn")
+                ID("player2").classList.replace("text-player-no-turn", "text-player-turn2")
+            }
+        }
+
+        function ID(id) {
+            return document.getElementById(id);
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
